@@ -1,0 +1,29 @@
+{
+  "name": "ng-input-price-format",
+  "version": "1.0.8",
+  "peerDependencies": {
+    "@angular/common": "^11.0.5",
+    "@angular/core": "^11.0.5"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  },
+  "keywords": [
+    "angular",
+    "angular price format",
+    "price",
+    "price format",
+    "input price",
+    "ng",
+    "ng price",
+    "format",
+    "format currency",
+    "number currency",
+    "currency",
+    "currency format",
+    "monney format",
+    "monney",
+    "monney input",
+    "currency input"
+  ]
+}
