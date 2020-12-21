@@ -1,27 +1,56 @@
-# InputPriceLib
+# Input Price Format Directive
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
+Transforms input to a currency string(with 2 digits).
 
-## Development server
+## Install
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+```
+npm install ng-input-price-format --save
+```
 
-## Code scaffolding
+## Usage
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+Add ```InputPriceFormatModule``` to your module's ```imports```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
 
-## Running unit tests
+import { InputPriceFormatModule } from 'ng-input-price-format';
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+@NgModule({
+  imports: [
+      BrowserModule, 
+      InputPriceFormatModule
+    ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
 
-## Running end-to-end tests
+class AppModule {}
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+platformBrowserDynamic().bootstrapModule(AppModule);
+```
 
-## Further help
+And then use 'inputPrice' directive it in your input tag component
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'example-app',
+  template: `
+  <input inputPrice [(ngModel)]="exampleNumber" />
+  `
+})
+export class AppComponent {
+  exampleNumber = 2000;
+}
+```
+
+
+## License
+
+[MIT](https://tldrlegal.com/license/mit-license) 
